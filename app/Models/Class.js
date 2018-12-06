@@ -4,6 +4,15 @@
 const Model = use('Model')
 
 class Class extends Model {
+
+    matriculations() {
+        return this.hasMany('App/Models/Matriculation')
+    }
+
+    events(){
+        return this.hasMany('App/Models/Event')
+    }
+
 }
 
 module.exports = Class

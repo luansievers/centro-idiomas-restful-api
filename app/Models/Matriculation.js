@@ -21,12 +21,8 @@ class Matriculation extends Model {
         return this.belongsTo('App/Models/Student')
     }
 
-    user(){
-        return this.belongsTo('App/Models/User')
-    }
-
     sales(){
-        return this.hasMany('App/Models/sales')
+        return this.hasMany('App/Models/Sales')
     }
 
     bills(){

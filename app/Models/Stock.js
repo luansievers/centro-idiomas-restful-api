@@ -3,11 +3,7 @@
 /** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
 const Model = use('Model')
 
-class Sale extends Model {
-
-    matriculation(){
-        return this.belongsTo('App/Models/Matriculation')
-    }
+class Stock extends Model {
 
     product(){
         return this.belongsTo('App/Models/Product')
@@ -15,4 +11,4 @@ class Sale extends Model {
 
 }
 
-module.exports = Sale
+module.exports = Stock

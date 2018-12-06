@@ -8,6 +8,7 @@ class ResourceSchema extends Schema {
     this.create('resources', (table) => {
       table.increments()
       table.integer('branch_id').unsigned().references('id').inTable('branches').notNullable()
+      table.string('title').notNullable()
       table.timestamps()
     })
   }
