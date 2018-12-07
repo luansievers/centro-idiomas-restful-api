@@ -1,7 +1,7 @@
 'use strict'
 
 
-const School = use("App/Models/School")
+const School = use('App/Models/School')
 
 class SchoolSeeder {
   async run () {

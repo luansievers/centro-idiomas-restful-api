@@ -19,6 +19,7 @@ const Route = use('Route')
 
 Route.group(() => {
 
+  Route.resource('/branches', 'BranchController').apiOnly()
   Route.post('/logout', 'SessionController.logout')
 
 }).prefix('api/v1').middleware(['auth'])

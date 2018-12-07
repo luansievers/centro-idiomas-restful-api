@@ -14,7 +14,6 @@ class BillSchema extends Schema {
       table.decimal('value').notNullable()//valor
       table.decimal('paidValue').nullable()//valorPago
       table.boolean('canceled').defaultTo(false)//cancelada
-
       table.timestamps()
     })
   }

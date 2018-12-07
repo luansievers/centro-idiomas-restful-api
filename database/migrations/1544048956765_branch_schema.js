@@ -9,11 +9,11 @@ class BranchSchema extends Schema {
       table.increments()
       table.string('title').notNullable()
       table.string('cep', 8).notNullable()
-      table.string('district').notNullable()//bairro
-      table.string('city').notNullable()//cidade
-      table.string('state').notNullable()//estado
-      table.string('adress').notNullable()//logradouro
-      table.string('phone',11).notNullable()//telefone
+      table.string('district').notNullable()
+      table.string('city').notNullable()
+      table.string('state').notNullable()
+      table.string('adress').notNullable()
+      table.string('phone',11).notNullable()
       table.timestamps()
     })
   }

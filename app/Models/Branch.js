@@ -17,6 +17,9 @@ class Branch extends Model {
         return this.hasMany('App/Models/Matriculation')
     }
 
+    plans(){
+        return this.hasMany('App/Models/Plan')
+    }
 }
 
 module.exports = Branch

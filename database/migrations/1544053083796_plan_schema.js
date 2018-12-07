@@ -7,6 +7,10 @@ class PlanSchema extends Schema {
   up () {
     this.create('plans', (table) => {
       table.increments()
+      table.integer('branch_id').unsigned().references('id').inTable('branches').notNullable()
+      table.string('title').notNullable()
+      table.decimal('value').notNullable()//valor
+      table.integer('duration').unsigned()//duração
       table.timestamps()
     })
   }

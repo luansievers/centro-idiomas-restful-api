@@ -3,17 +3,17 @@
 /** @type {import('@adonisjs/lucid/src/Schema')} */
 const Schema = use('Schema')
 
-class MatriculationSchema extends Schema {
+class PreAdhesionSchema extends Schema {
   up () {
-    this.create('matriculations', (table) => {
+    this.create('pre_adhesions', (table) => {
       table.increments()
       table.timestamps()
     })
   }
 
   down () {
-    this.drop('matriculations')
+    this.drop('pre_adhesions')
   }
 }
 
-module.exports = MatriculationSchema
+module.exports = PreAdhesionSchema
