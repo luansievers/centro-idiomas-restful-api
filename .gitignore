@@ -77,3 +77,6 @@ typings/
 
 #DynamoDB Local files 
 .dynamodb/ 
+
+#Plugin de histórico
+.history/

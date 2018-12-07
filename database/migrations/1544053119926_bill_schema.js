@@ -8,6 +8,7 @@ class BillSchema extends Schema {
     this.create('bills', (table) => {
       table.increments()
       table.integer('matriculation_id').unsigned().references('id').inTable('matriculations').notNullable()
+      table.integer('account_id').unsigned().references('id').inTable('accounts')
       table.date('dueDay').notNullable()//vencimento
       table.date('payDay').nullable()//data de pagamento
       table.decimal('discount').defaultTo(0)//desconto

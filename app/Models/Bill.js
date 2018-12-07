@@ -9,6 +9,8 @@ class Bill extends Model {
         return this.belongsTo('App/Models/Matriculation')
     }
 
+    
+
 }
 
 module.exports = Bill
