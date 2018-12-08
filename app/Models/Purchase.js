@@ -5,7 +5,11 @@ const Model = use('Model')
 
 class Purchase extends Model {
 
-    product(){
+    matriculation() {
+        return this.belongsTo('App/Models/Matriculation')
+    }
+
+    product() {
         return this.belongsTo('App/Models/Product')
     }
 

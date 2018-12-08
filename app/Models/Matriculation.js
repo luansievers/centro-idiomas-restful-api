@@ -5,31 +5,31 @@ const Model = use('Model')
 
 class Matriculation extends Model {
 
-    branch(){
+    branch() {
         return this.belongsTo('App/Models/Branch')
     }
 
-    class(){
+    class() {
         return this.belongsTo('App/Models/Class')
     }
 
-    plan(){
+    plan() {
         return this.belongsTo('App/Models/Plan')
     }
 
-    student(){
+    student() {
         return this.belongsTo('App/Models/Student')
     }
 
-    sales(){
-        return this.hasMany('App/Models/Sales')
+    purchases() {
+        return this.hasMany('App/Models/Purchase')
     }
 
-    bills(){
+    bills() {
         return this.hasMany('App/Models/Bill')
     }
 
-    lessons(){
+    lessons() {
         return this.belongsToMany('App/Models/Lesson')
     }
 

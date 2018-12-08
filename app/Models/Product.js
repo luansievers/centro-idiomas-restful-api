@@ -5,15 +5,11 @@ const Model = use('Model')
 
 class Product extends Model {
 
-    sales(){
-        return this.hasMany('App/Models/Sale')
-    }
-
-    purchases(){
+    purchases() {
         return this.hasMany('App/Models/Purchase')
     }
 
-    stock(){
+    stock() {
         return this.hasOne('App/Models/Stock')
     }
 }

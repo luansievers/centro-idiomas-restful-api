@@ -5,15 +5,15 @@ const Model = use('Model')
 
 class Event extends Model {
 
-    resource(){
+    resource() {
         return this.belongsTo('App/Models/Resource')
     }
 
-    class(){
+    class() {
         return this.belongsTo('App/Models/Class')
     }
 
-    teacher(){
+    teacher() {
         return this.belongsTo('App/Models/Teacher')
     }
 

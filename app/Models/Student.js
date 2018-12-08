@@ -5,11 +5,11 @@ const Model = use('Model')
 
 class Student extends Model {
 
-    matriculations(){
+    matriculations() {
         return this.hasMany('App/Models/Matriculation')
     }
 
-    user(){
+    user() {
         return this.belongsTo('App/Models/User')
     }
 

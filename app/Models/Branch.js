@@ -5,19 +5,15 @@ const Model = use('Model')
 
 class Branch extends Model {
 
-    school(){
-        return this.belongsTo('App/Models/School')
-    }
-
-    resources(){
+    resources() {
         return this.hasMany('App/Models/Resource')
     }
 
-    matriculations(){
+    matriculations() {
         return this.hasMany('App/Models/Matriculation')
     }
 
-    plans(){
+    plans() {
         return this.hasMany('App/Models/Plan')
     }
 }

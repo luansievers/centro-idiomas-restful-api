@@ -5,7 +5,7 @@ const Model = use('Model')
 
 class Stock extends Model {
 
-    product(){
+    product() {
         return this.belongsTo('App/Models/Product')
     }
 

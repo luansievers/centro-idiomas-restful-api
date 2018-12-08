@@ -5,11 +5,11 @@ const Model = use('Model')
 
 class Lesson extends Model {
 
-    teacher(){
+    teacher() {
         return this.belongsTo('App/Models/Teacher')
     }
 
-    matriculations(){
+    matriculations() {
         return this.belongsToMany('App/Models/Matriculation')
     }
 

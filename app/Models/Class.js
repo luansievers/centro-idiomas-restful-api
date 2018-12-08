@@ -9,7 +9,7 @@ class Class extends Model {
         return this.hasMany('App/Models/Matriculation')
     }
 
-    events(){
+    events() {
         return this.hasMany('App/Models/Event')
     }
 

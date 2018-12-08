@@ -5,15 +5,15 @@ const Model = use('Model')
 
 class Teacher extends Model {
 
-    events(){
+    events() {
         return this.hasMany('App/Models/Event')
     }
 
-    lessons(){
+    lessons() {
         return this.hasMany('App/Models/Lesson')
     }
 
-    user(){
+    user() {
         return this.belongsTo('App/Models/User')
     }
 

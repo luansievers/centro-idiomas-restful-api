@@ -5,8 +5,12 @@ const Model = use('Model')
 
 class Plan extends Model {
 
-    matriculations(){
+    matriculations() {
         return this.hasMany('App/Models/Matriculation')
+    }
+
+    branch() {
+        return this.belongsTo('App/Models/Branch')
     }
 
 }

@@ -5,10 +5,10 @@ const Model = use('Model')
 
 class Employee extends Model {
 
-    user(){
+    user() {
         return this.belongsTo('App/Models/User')
     }
-    
+
 }
 
 module.exports = Employee

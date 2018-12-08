@@ -5,11 +5,13 @@ const Model = use('Model')
 
 class Bill extends Model {
 
-    matriculation(){
+    matriculation() {
         return this.belongsTo('App/Models/Matriculation')
     }
 
-    
+    account() {
+        return this.belongsTo('App/Model/Account')
+    }
 
 }
 

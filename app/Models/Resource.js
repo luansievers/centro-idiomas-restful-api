@@ -5,11 +5,11 @@ const Model = use('Model')
 
 class Resource extends Model {
 
-    branch(){
+    branch() {
         return this.belongsTo('App/Models/Branch')
     }
 
-    events(){
+    events() {
         return this.hasMany('App/Models/Event')
     }
 
