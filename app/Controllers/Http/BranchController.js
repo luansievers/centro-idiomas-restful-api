@@ -5,23 +5,20 @@ const Branch = use('App/Models/Branch')
 class BranchController {
 
   async index ({ request, response, view, auth }) {
-    const candidato = await Branch.all()
-    return branch
+    return await Branch.all()
   }
 
   async store ({ request, response, auth }) {
-    const data = request.only(['title', 'cep', 'district', 'city', 'state', 'adress', 'phone'])
-    const branch = await Branch.create(data)
-    return branch
+    const data = request.all()
+    return await Branch.create(data)
   }
 
   async show ({ params, request, response, view, auth }) {
-    const branch = await Branch.findOrFail(params.id)
-    return branch
+    return await Branch.findOrFail(params.id)
   }
 
   async update ({ params, request, response, auth }) {
-    const data = request.only(['title', 'cep', 'district', 'city', 'state', 'adress', 'phone'])
+    const data = request.all()
     const branch = await Branch.findOrFail(params.id)
     branch.merge(data)
     await branch.save()
