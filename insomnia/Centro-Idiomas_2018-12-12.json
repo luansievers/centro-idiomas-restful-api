@@ -1,0 +1,310 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-12-12T02:02:01.130Z",
+	"__export_source": "insomnia.desktop.app:v6.2.3",
+	"resources": [
+		{
+			"_id": "wrk_3a9abc11020d49d9b5c03796c3adca7a",
+			"created": 1543679434250,
+			"description": "",
+			"modified": 1543679434250,
+			"name": "Centro Idiomas",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_698d736c9f284cd5963e58821be8f78e",
+			"color": null,
+			"created": 1543679434260,
+			"data": {
+				"url": "http://127.0.0.1:3333/api/v1"
+			},
+			"isPrivate": false,
+			"metaSortKey": 1543679434260,
+			"modified": 1544573316700,
+			"name": "New Environment",
+			"parentId": "wrk_3a9abc11020d49d9b5c03796c3adca7a",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_a8f6f6bb00a945fbb7bc757a391d00ef",
+			"cookies": [],
+			"created": 1543679434264,
+			"modified": 1543679434264,
+			"name": "Default Jar",
+			"parentId": "wrk_3a9abc11020d49d9b5c03796c3adca7a",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_26e2768f0eb64058a0ed295cbfdcfecd",
+			"created": 1544047730740,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1544047730740,
+			"modified": 1544047730740,
+			"name": "Session",
+			"parentId": "wrk_3a9abc11020d49d9b5c03796c3adca7a",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_0d1fb66f5c6143d498017136849f780d",
+			"created": 1544577256779,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1544577256779,
+			"modified": 1544577256779,
+			"name": "Branch",
+			"parentId": "wrk_3a9abc11020d49d9b5c03796c3adca7a",
+			"_type": "request_group"
+		},
+		{
+			"_id": "env_c693c0784d984ad5b5c855de6e7e9381",
+			"color": null,
+			"created": 1544573318651,
+			"data": {
+				"login": {
+					"prefix": "{% response 'body', 'req_7228f2411a1d403b90291e6e2a1af871', '$.type' %}",
+					"token": "{% response 'body', 'req_7228f2411a1d403b90291e6e2a1af871', '$.token' %}"
+				},
+				"url": "http://127.0.0.1:3333/api/v1"
+			},
+			"isPrivate": false,
+			"metaSortKey": 1544573318651,
+			"modified": 1544579927060,
+			"name": "Centro Idiomas",
+			"parentId": "env_698d736c9f284cd5963e58821be8f78e",
+			"_type": "environment"
+		},
+		{
+			"_id": "req_7228f2411a1d403b90291e6e2a1af871",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"username\": \"luan.sievers\",\n\t\"password\": \"safada\"\n}"
+			},
+			"created": 1544047746043,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_44c233f24129476ab575dc6f469e9382",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544047730690,
+			"method": "POST",
+			"modified": 1544580022762,
+			"name": "login",
+			"parameters": [],
+			"parentId": "fld_26e2768f0eb64058a0ed295cbfdcfecd",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ url  }}/login",
+			"_type": "request"
+		},
+		{
+			"_id": "req_19d902f11e6e4faf820885aadddd2f55",
+			"authentication": {
+				"prefix": "{{ login.prefix }}",
+				"token": "{{ login.token }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1544573248139,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1544047730640,
+			"method": "POST",
+			"modified": 1544580033819,
+			"name": "logout",
+			"parameters": [],
+			"parentId": "fld_26e2768f0eb64058a0ed295cbfdcfecd",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ url  }}/logout",
+			"_type": "request"
+		},
+		{
+			"_id": "req_4c52f4eb375a4a20acea19123b92531c",
+			"authentication": {
+				"prefix": "{{ login.prefix }}",
+				"token": "{{ login.token }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1544577270968,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1544577270968,
+			"method": "GET",
+			"modified": 1544580035437,
+			"name": "index",
+			"parameters": [],
+			"parentId": "fld_0d1fb66f5c6143d498017136849f780d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ url  }}/branches",
+			"_type": "request"
+		},
+		{
+			"_id": "req_adde2f175fa346489b73a9369649b1ab",
+			"authentication": {
+				"prefix": "{{ login.prefix }}",
+				"token": "{{ login.token }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"title\": \"Videira\",\n\t\"cep\": \"88040420\",\n\t\"district\": \"Centro\",\n\t\"city\": \"Videira\",\n\t\"state\": \"SC\",\n\t\"adress\": \"Rua José João Martendal\",\n\t\"phone\": \"48988286772\"\n}"
+			},
+			"created": 1544577325575,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_cfb9557e02e545beb344c33e77672512",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544312500829,
+			"method": "POST",
+			"modified": 1544579963028,
+			"name": "store",
+			"parameters": [],
+			"parentId": "fld_0d1fb66f5c6143d498017136849f780d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ url  }}/branches",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b3776e6f518b4c5c9c4b177ae54b8980",
+			"authentication": {
+				"prefix": "{{ login.prefix }}",
+				"token": "{{ login.token }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
+			"created": 1544577493827,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_cfb9557e02e545beb344c33e77672512",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544180115759.5,
+			"method": "GET",
+			"modified": 1544580021592,
+			"name": "show",
+			"parameters": [],
+			"parentId": "fld_0d1fb66f5c6143d498017136849f780d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ url  }}/branches/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_df89ff15e72e41edbbaadb2bdbc1628d",
+			"authentication": {
+				"prefix": "{{ login.prefix }}",
+				"token": "{{ login.token }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"title\": \"Videira2\",\n\t\"cep\": \"88040420\",\n\t\"district\": \"Centro\",\n\t\"city\": \"Videira\",\n\t\"state\": \"SC\",\n\t\"adress\": \"Rua José João Martendal\",\n\t\"phone\": \"48988286772\"\n}"
+			},
+			"created": 1544577735124,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_cfb9557e02e545beb344c33e77672512",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544246308294.25,
+			"method": "PUT",
+			"modified": 1544580002796,
+			"name": "update",
+			"parameters": [],
+			"parentId": "fld_0d1fb66f5c6143d498017136849f780d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ url  }}/branches/2",
+			"_type": "request"
+		},
+		{
+			"_id": "req_ab1e3f18b039410d91e20673d4f59d76",
+			"authentication": {
+				"prefix": "{{ login.prefix }}",
+				"token": "{{ login.token }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
+			"created": 1544577855622,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_cfb9557e02e545beb344c33e77672512",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544213212026.875,
+			"method": "DELETE",
+			"modified": 1544580012485,
+			"name": "delete",
+			"parameters": [],
+			"parentId": "fld_0d1fb66f5c6143d498017136849f780d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ url  }}/branches/1",
+			"_type": "request"
+		}
+	]
+}
