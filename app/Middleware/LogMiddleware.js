@@ -16,9 +16,9 @@ class LogMiddleware {
       try {
         await auth.getUser()
         const token = await auth.listTokens()
-        changeLog.token_id = token[0].id
+        changeLog.token().associate(token[0])
       } catch (error) {
-        changeLog.token_id = null
+        //do nothing
       }
 
       changeLog.save()
