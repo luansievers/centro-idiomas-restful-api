@@ -12,7 +12,7 @@ class ProductSchema extends Schema {
   }
 
   down () {
-    this.drop('products')
+    this.drop('products') 
   }
 }
 

@@ -22,7 +22,7 @@ class StudentSchema extends Schema {
   }
 
   down () {
-    this.drop('students')
+    this.drop('students') 
   }
 }
 

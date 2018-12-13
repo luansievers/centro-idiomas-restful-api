@@ -16,7 +16,7 @@ class ChangeLogSchema extends Schema {
   }
 
   down () {
-    this.drop('change_logs')
+    this.drop('change_logs') 
   }
 }
 

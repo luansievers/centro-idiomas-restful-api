@@ -12,7 +12,7 @@ class PreAdhesionSchema extends Schema {
   }
 
   down () {
-    this.drop('pre_adhesions')
+    this.drop('pre_adhesions') 
   }
 }
 

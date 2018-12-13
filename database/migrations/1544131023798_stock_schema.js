@@ -13,7 +13,7 @@ class StockSchema extends Schema {
   }
 
   down () {
-    this.drop('stocks')
+    this.drop('stocks') 
   }
 }
 

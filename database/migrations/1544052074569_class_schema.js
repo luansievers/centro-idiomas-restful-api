@@ -13,7 +13,7 @@ class ClassSchema extends Schema {
   }
 
   down () {
-    this.drop('classes')
+    this.drop('classes') 
   }
 }
 

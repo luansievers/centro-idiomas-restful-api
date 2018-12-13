@@ -14,7 +14,7 @@ class RevanueSchema extends Schema {
   }
 
   down () {
-    this.drop('revanues')
+    this.drop('revanues') 
   }
 }
 

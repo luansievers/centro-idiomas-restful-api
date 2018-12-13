@@ -12,7 +12,7 @@ class AccountSchema extends Schema {
   }
 
   down () {
-    this.drop('accounts')
+    this.drop('accounts') 
   }
 }
 

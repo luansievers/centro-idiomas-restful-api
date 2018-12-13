@@ -14,7 +14,7 @@ class ResourceSchema extends Schema {
   }
 
   down () {
-    this.drop('resources')
+    this.drop('resources') 
   }
 }
 

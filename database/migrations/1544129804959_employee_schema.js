@@ -17,7 +17,7 @@ class EmployeeSchema extends Schema {
       table.string('state').notNullable()//estado
       table.string('adress').notNullable()//logradouro
       table.string('gender',1).notNullable()//sexo
-      table.timestamps()
+      table.timestamps() 
     })
   }
 

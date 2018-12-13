@@ -20,7 +20,7 @@ class BillSchema extends Schema {
   }
 
   down () {
-    this.drop('bills')
+    this.drop('bills') 
   }
 }
 

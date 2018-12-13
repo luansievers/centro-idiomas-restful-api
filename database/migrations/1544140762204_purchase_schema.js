@@ -14,7 +14,7 @@ class PurchaseSchema extends Schema {
   }
 
   down () {
-    this.drop('purchases')
+    this.drop('purchases') 
   }
 }
 

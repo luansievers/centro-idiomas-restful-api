@@ -15,7 +15,7 @@ class LessonMatriculationSchema extends Schema {
   }
 
   down () {
-    this.drop('lesson_matriculation')
+    this.drop('lesson_matriculation') 
   }
 }
 
