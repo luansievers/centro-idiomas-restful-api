@@ -15,7 +15,7 @@ class TeacherSchema extends Schema {
       table.string('district').notNullable()//bairro
       table.string('city').notNullable()//cidade
       table.string('state').notNullable()//estado
-      table.string('adress').notNullable()//logradouro
+      table.string('address').notNullable()//logradouro
       table.string('gender',1).notNullable()//sexo
       table.boolean('is_revoked').defaultTo(false)
       table.timestamps()

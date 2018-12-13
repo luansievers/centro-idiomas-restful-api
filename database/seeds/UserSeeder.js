@@ -4,11 +4,11 @@ const User = use('App/Models/User')
 
 class UserSeeder {
   async run () {
-    const data = {}
-    data.username = 'luan.sievers'
-    data.email = 'luan.sievers@gmail.com'
-    data.password = 'safada'
-    await User.create(data)
+    const user = new User()
+    user.username = 'luan.sievers'
+    user.email = 'luan.sievers@gmail.com'
+    user.password = 'safada'
+    await user.save()
   }
 }
 

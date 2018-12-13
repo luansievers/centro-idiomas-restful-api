@@ -17,7 +17,7 @@ class StudentSchema extends Schema {
       table.string('district').notNullable()//bairro
       table.string('city').notNullable()//cidade
       table.string('state').notNullable()//estado
-      table.string('adress').notNullable()//logradouro
+      table.string('address').notNullable()//logradouro
       table.string('gender',1).notNullable()//sexo
       table.date('birth_date').notNullable()//data de nascimento
       table.timestamps()

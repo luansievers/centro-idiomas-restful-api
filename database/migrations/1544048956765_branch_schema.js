@@ -12,7 +12,7 @@ class BranchSchema extends Schema {
       table.string('district').notNullable()
       table.string('city').notNullable()
       table.string('state').notNullable()
-      table.string('adress').notNullable()
+      table.string('address').notNullable()
       table.string('phone',11).notNullable()
       table.timestamps()
     })
