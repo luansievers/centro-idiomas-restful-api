@@ -18,7 +18,7 @@ class EventSchema extends Schema {
   }
 
   down () {
-    this.drop('events') 
+    this.drop('events')
   }
 }
 

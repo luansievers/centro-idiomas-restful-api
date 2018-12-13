@@ -7,6 +7,8 @@ class ProductSchema extends Schema {
   up () {
     this.create('products', (table) => {
       table.increments()
+      table.string('name').notNullable()
+      table.decimal('value').notNullable()//valor
       table.timestamps()
     })
   }

@@ -11,7 +11,7 @@ class PlanSchema extends Schema {
       table.string('title').notNullable()
       table.decimal('value').notNullable()//valor
       table.integer('duration').unsigned()//duração
-      table.boolean('is_active').defaultTo(true)
+      table.boolean('is_revoked').defaultTo(false)
       table.timestamps()
     })
   }

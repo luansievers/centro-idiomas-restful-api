@@ -7,6 +7,7 @@ class AccountSchema extends Schema {
   up () {
     this.create('accounts', (table) => {
       table.increments()
+      table.string('title').notNullable()
       table.timestamps()
     })
   }

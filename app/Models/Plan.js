@@ -13,6 +13,9 @@ class Plan extends Model {
         return this.belongsTo('App/Models/Branch')
     }
 
+    preAdhesions(){
+        return this.hasMany('App/Models/PreAdhesion')
+    }
 }
 
 module.exports = Plan

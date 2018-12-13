@@ -16,6 +16,14 @@ class Branch extends Model {
     plans() {
         return this.hasMany('App/Models/Plan')
     }
+
+    preAdhesions(){
+        return this.hasMany('App/Models/PreAdhesion')
+    }
+
+    expenses(){
+        return this.hasMany('App/Models/Expense')
+    }
 }
 
 module.exports = Branch

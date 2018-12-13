@@ -8,6 +8,7 @@ class StockSchema extends Schema {
     this.create('stocks', (table) => {
       table.increments()
       table.integer('product_id').unsigned().references('id').inTable('products')
+      table.integer('quantity').defaultTo(0)
       table.timestamps()
     })
   }

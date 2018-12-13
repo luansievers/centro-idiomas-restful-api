@@ -19,7 +19,7 @@ class BranchSchema extends Schema {
   }
 
   down () {
-    this.drop('branches') 
+    this.drop('branches')
   }
 }
 

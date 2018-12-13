@@ -9,7 +9,7 @@ class LessonMatriculationSchema extends Schema {
       table.increments()
       table.integer('lesson_id').unsigned().references('id').inTable('lessons')
       table.integer('matriculation_id').unsigned().references('id').inTable('matriculations')
-      table.boolean('present').notNullable()
+      table.boolean('is_present').notNullable()
       table.timestamps()
     })
   }

@@ -33,6 +33,10 @@ class Matriculation extends Model {
         return this.belongsToMany('App/Models/Lesson')
     }
 
+    product() {
+        return this.belongsTo('App/Models/Product')
+    }
+
 }
 
 module.exports = Matriculation

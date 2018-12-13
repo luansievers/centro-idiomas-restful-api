@@ -9,6 +9,10 @@ class PurchaseSchema extends Schema {
       table.increments()
       table.integer('product_id').unsigned().references('id').inTable('products')
       table.integer('matriculation_id').unsigned().references('id').inTable('matriculations')
+      table.integer('installments').notNullable()
+      table.decimal('value').notNullable()//valor
+      table.decimal('discount').defaultTo(0)//desconto
+      table.date('payDay').notNullable()
       table.timestamps()
     })
   }

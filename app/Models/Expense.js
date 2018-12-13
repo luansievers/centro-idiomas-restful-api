@@ -13,6 +13,10 @@ class Expense extends Model {
         return this.belongsTo('App/Model/Category')
     }
 
+    branch() {
+        return this.belongsTo('App/Model/Branch')
+    }
+
 }
 
 module.exports = Expense

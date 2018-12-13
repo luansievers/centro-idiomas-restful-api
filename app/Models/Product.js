@@ -12,6 +12,10 @@ class Product extends Model {
     stock() {
         return this.hasOne('App/Models/Stock')
     }
+
+    matriculations(){
+        return this.hasMany('App/Models/Matriculation')
+    }
 }
 
 module.exports = Product

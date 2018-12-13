@@ -8,6 +8,7 @@ class ClassSchema extends Schema {
     this.create('classes', (table) => {
       table.increments()
       table.string('title').notNullable()
+      table.boolean('is_revoked').defaultTo(false)
       table.timestamps()
     })
   }
