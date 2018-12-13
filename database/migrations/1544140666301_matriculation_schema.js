@@ -12,7 +12,7 @@ class MatriculationSchema extends Schema {
       table.integer('class_id').unsigned().references('id').inTable('classes').notNullable()
       table.integer('student_id').unsigned().references('id').inTable('students').notNullable()
       table.integer('product_id').unsigned().references('id').inTable('products').notNullable()
-      table.string('number').defaultTo(this.fn.now()).notNullable()//numero de matricula
+      table.string('number').notNullable()//numero de matricula
       table.boolean('is_revoked').defaultTo(false)//cancelado
       table.boolean('is_overdue').defaultTo(false)//inadimplente
       table.integer('dueDay',2).notNullable()
