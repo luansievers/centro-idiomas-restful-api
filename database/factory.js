@@ -2,6 +2,44 @@
 
 const Factory = use('Factory')
 
+Factory.blueprint('App/Models/Purchase', (faker) => {
+  return {
+    installments: faker.d5(),
+    value: faker.d100(),
+    discount: 0,
+    payDay: faker.pickone([null, faker.date({year: 2017})]),
+  }
+})
+
+Factory.blueprint('App/Models/Category', (faker) => {
+  return {
+    title: faker.word({ length: 10 }),
+    is_expense: faker.pickone([true, false])
+  }
+})
+
+Factory.blueprint('App/Models/Expense', (faker) => {
+  return {
+    value: faker.d100(),
+    payment_method: faker.pickone(['alpha', 'bravo', 'charlie']),
+    dueDay: faker.date({year: 2017}),
+    payDay: faker.pickone([null, faker.date({year: 2017})]),
+    name: faker.word({ length: 5 }),
+    description: faker.sentence({ words: 5 })
+  }
+})
+
+Factory.blueprint('App/Models/Revanue', (faker) => {
+  return {
+    value: faker.d100(),
+    payment_method: faker.pickone(['alpha', 'bravo', 'charlie']),
+    dueDay: faker.date({year: 2017}),
+    payDay: faker.pickone([null, faker.date({year: 2017})]),
+    name: faker.word({ length: 5 }),
+    description: faker.sentence({ words: 5 })
+  }
+})
+
 Factory.blueprint('App/Models/Branch', (faker) => {
   return {
     title: faker.company(),
