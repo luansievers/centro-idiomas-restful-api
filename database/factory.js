@@ -2,23 +2,23 @@
 
 const Factory = use('Factory')
 
-Factory.blueprint('App/Models/User', (faker) => {
+Factory.blueprint('App/Models/User', async (faker, i, data) => {
   return {
-    username: faker.name(),
-    email: faker.email(),
-    password: faker.string()
+    username: data.username || faker.name(),
+    email: data.email || faker.email(),
+    password: data.password || faker.string()
   }
 })
 
-Factory.blueprint('App/Models/Branch', (faker) => {
+Factory.blueprint('App/Models/Branch', async (faker, i, data) => {
   return {
-    title: faker.company(),
-    cep: faker.zip(),
-    district: faker.province(),
-    city: faker.city(),
-    state: faker.state(),
-    address: faker.address(),
-    phone: faker.phone({ formatted: false, country: 'br' }),
+    title: data.title || faker.company(),
+    cep: data.cep || faker.zip(),
+    district: data.district || faker.province(),
+    city: data.city || faker.city(),
+    state: data.state || faker.state(),
+    address: data.address || faker.address(),
+    phone: data.phone || faker.phone({ formatted: false, country: 'br' }),
   }
 })
 
