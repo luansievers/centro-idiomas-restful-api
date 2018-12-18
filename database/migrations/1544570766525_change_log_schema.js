@@ -10,7 +10,7 @@ class ChangeLogSchema extends Schema {
       table.integer('token_id').unsigned().references('id').inTable('tokens')
       table.string('method')
       table.string('url')
-      table.string('data')
+      table.json('data')
       table.timestamps()
     })
   }
