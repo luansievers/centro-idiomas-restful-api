@@ -19,6 +19,9 @@ const Route = use('Route')
 
 Route.group(() => {
 
+  Route.resource('/students', 'StudentController').apiOnly()
+  Route.resource('/plans', 'PlanController').apiOnly()
+  Route.resource('/matriculations', 'MatriculationController').apiOnly()
   Route.resource('/branches', 'BranchController').apiOnly()
   Route.post('/logout', 'SessionController.logout')
 

@@ -31,7 +31,7 @@ Factory.blueprint('App/Models/Resource', async (faker, i, data) => {
 Factory.blueprint('App/Models/Class', async (faker, i, data) => {
   return {
     title: data.title || faker.animal(),
-    is_revoked: data.is_revoked || faker.pickone([true, false])
+    // is_revoked: data.is_revoked || faker.pickone([true, false])
   }
 })
 

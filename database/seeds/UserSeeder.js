@@ -4,13 +4,13 @@ const Factory = use('Factory')
 
 class UserSeeder {
   async run () {
-    const users = await Factory.model('App/Models/User').createMany(20)
-
-    for (const user of users) {
-
-      const teacher = await Factory.model('App/Models/Teacher').make()
-      await user.teacher().save(teacher)
-    }
+    await Factory.model('App/Models/User')
+      .create(
+        {
+          username: 'luan.sievers',
+          email: 'luan.sievers@gmail.com',
+          password: '123456789'
+        })
   }
 }
 
